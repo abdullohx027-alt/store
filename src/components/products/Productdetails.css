@@ -1,0 +1,408 @@
+.pd {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 60px 0 80px;
+  font-family: "Poppins", sans-serif;
+  animation: pdFadeIn 0.5s ease both;
+}
+
+@keyframes pdFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Breadcrumb ---------- */
+.pd-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 80px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.pd-breadcrumb button {
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.pd-breadcrumb button:hover {
+  color: #db4444;
+}
+
+.pd-breadcrumb strong {
+  color: #000;
+  font-weight: 400;
+}
+
+/* ---------- Main layout ---------- */
+.pd-main {
+  display: grid;
+  grid-template-columns: 170px 500px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.pd-thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pd-thumb {
+  height: 138px;
+  padding: 12px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background: #f5f5f5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pd-thumb.active {
+  border-color: #db4444;
+}
+
+.pd-thumb img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.pd-image {
+  height: 600px;
+  border-radius: 4px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.pd-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ---------- Info ---------- */
+.pd-info h2 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.pd-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.pd-stars {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.pd-stars-bg {
+  color: #bfbfbf;
+}
+
+.pd-stars-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #ffad33;
+}
+
+.pd-reviews {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.pd-divider {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.pd-stock {
+  color: #00ff66;
+}
+
+.pd-price {
+  margin: 16px 0;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.pd-desc {
+  margin: 0 0 24px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.pd-info hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  margin: 0 0 24px;
+}
+
+.pd-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.pd-label {
+  font-size: 20px;
+}
+
+.pd-colors,
+.pd-sizes {
+  display: flex;
+  gap: 8px;
+}
+
+.pd-color {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.pd-color.active {
+  outline-color: #000;
+}
+
+.pd-size {
+  min-width: 32px;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pd-size.active {
+  border-color: #db4444;
+  background: #db4444;
+  color: #fff;
+}
+
+/* ---------- Buy row ---------- */
+.pd-buy {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.pd-qty {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.pd-qty button {
+  width: 40px;
+  height: 44px;
+  border: none;
+  background: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.pd-qty button.plus {
+  background: #db4444;
+  color: #fff;
+}
+
+.pd-qty span {
+  width: 80px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  line-height: 44px;
+}
+
+.pd-buy-btn {
+  flex: 1;
+  max-width: 165px;
+  height: 46px;
+  border: none;
+  border-radius: 4px;
+  background: #db4444;
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pd-buy-btn:hover {
+  background: #e07575;
+}
+
+.pd-like {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  background: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.pd-like.active {
+  color: #db4444;
+  border-color: #db4444;
+}
+
+/* ---------- Delivery box ---------- */
+.pd-delivery {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.pd-delivery-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+}
+
+.pd-delivery-item + .pd-delivery-item {
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.pd-delivery-icon {
+  font-size: 32px;
+}
+
+.pd-delivery-item h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.pd-delivery-item p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ---------- Back button ---------- */
+.pd-back-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.pd-back {
+  padding: 14px 40px;
+  border: 1px solid #db4444;
+  border-radius: 4px;
+  background: #fff;
+  color: #db4444;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pd-back:hover {
+  background: #db4444;
+  color: #fff;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+  .pd {
+    padding: 40px 20px 60px;
+  }
+  .pd-main {
+    grid-template-columns: 120px 1fr;
+  }
+  .pd-info {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .pd-main {
+    grid-template-columns: 1fr;
+  }
+  .pd-thumbs {
+    flex-direction: row;
+    order: 2;
+  }
+  .pd-thumb {
+    flex: 1;
+    height: 90px;
+  }
+  .pd-image {
+    height: 360px;
+  }
+  .pd-breadcrumb {
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+}
+
+/* ---------- Loading ---------- */
+.pd-loader {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.pd-loader p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.pd-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #f5f5f5;
+  border-top-color: #db4444;
+  border-radius: 50%;
+  animation: pdSpin 0.8s linear infinite;
+}
+
+@keyframes pdSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
